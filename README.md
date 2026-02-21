@@ -52,7 +52,7 @@
 ### 系统要求
 
 - Node.js >= 18.0.0
-- Yarn >= 4.0.0
+- Yarn >= 1.22.0（推荐使用项目指定的版本）
 - Linux / macOS / Windows (WSL)
 - 支持 ARM64、x64 架构
 - Termux (Android)
@@ -78,6 +78,9 @@ curl -fsSL https://raw.githubusercontent.com/Starlight-apk/VantaCore/main/script
 git clone https://github.com/Starlight-apk/VantaCore.git
 cd VantaCore
 
+# 启用 Corepack（自动使用正确的 Yarn 版本）
+corepack enable
+
 # 安装依赖
 yarn install
 
@@ -97,6 +100,15 @@ yarn install
 # 启动开发服务器
 yarn dev
 ```
+
+### 注意事项
+
+> **Termux 用户**：项目已配置为使用 Yarn 1.x 版本，确保全局 Yarn 版本 >= 1.22.0。
+> 如果遇到版本问题，请运行：
+> ```bash
+> corepack enable
+> corepack prepare yarn@1.22.22 --activate
+> ```
 
 ---
 
