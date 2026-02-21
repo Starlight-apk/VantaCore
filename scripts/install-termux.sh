@@ -48,7 +48,7 @@ pkg install python make clang libcrypt libffi openssl -y
 
 # 安装 Yarn
 log_info "安装 Yarn..."
-npm install -g yarn
+pkg install yarn -y
 
 # 设置 npm 镜像（加速下载）
 log_info "配置 npm 镜像..."
