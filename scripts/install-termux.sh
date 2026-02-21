@@ -44,7 +44,7 @@ pkg install nodejs -y
 
 # 安装构建工具
 log_info "安装构建工具..."
-pkg install python make clang libcrypt libcrypt-dev libffi libffi-dev openssl openssl-dev -y
+pkg install python make clang libcrypt libffi openssl -y
 
 # 安装 Yarn
 log_info "安装 Yarn..."
