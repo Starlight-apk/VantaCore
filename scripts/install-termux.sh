@@ -54,6 +54,12 @@ pkg install yarn -y
 log_info "配置 npm 镜像..."
 npm config set registry https://registry.npmmirror.com
 
+# 克隆项目
+log_info "克隆 VantaCore 项目..."
+cd ~
+git clone https://github.com/Starlight-apk/VantaCore.git
+cd VantaCore
+
 # 安装项目依赖
 log_info "安装 VantaCore 依赖..."
 yarn install
@@ -66,7 +72,7 @@ yarn build
 log_info "创建启动脚本..."
 cat > ~/vantacore-start.sh << 'EOF'
 #!/data/data/com.termux/files/usr/bin/bash
-cd /storage/self/primary/Kaifa/VantaCore
+cd $HOME/VantaCore
 export NODE_ENV=production
 export PORT=8080
 node dist/server/index.js
