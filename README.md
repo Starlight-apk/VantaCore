@@ -75,8 +75,8 @@ curl -fsSL https://raw.githubusercontent.com/Starlight-apk/VantaCore/main/script
 
 ```bash
 # 克隆项目
-git clone https://github.com/vantacore/vantacore.git
-cd vantacore
+git clone https://github.com/Starlight-apk/VantaCore.git
+cd VantaCore
 
 # 安装依赖
 yarn install
