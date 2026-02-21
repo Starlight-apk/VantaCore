@@ -13,7 +13,11 @@ build/
 # 数据文件
 data/
 *.db
+# 忽略所有 JSON 文件，但 package.json 除外
 *.json
+!package.json
+!tsconfig.json
+!tsconfig.server.json
 
 # 日志
 logs/
