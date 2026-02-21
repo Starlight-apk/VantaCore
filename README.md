@@ -62,13 +62,13 @@
 #### Linux / ARM64
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/vantacore/vantacore/main/scripts/install-linux.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Starlight-apk/VantaCore/main/scripts/install-linux.sh | bash
 ```
 
 #### Termux
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/vantacore/vantacore/main/scripts/install-termux.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Starlight-apk/VantaCore/main/scripts/install-termux.sh | bash
 ```
 
 ### 手动安装
