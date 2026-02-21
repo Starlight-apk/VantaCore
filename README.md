@@ -78,10 +78,10 @@ curl -fsSL https://raw.githubusercontent.com/Starlight-apk/VantaCore/main/script
 git clone https://github.com/Starlight-apk/VantaCore.git
 cd VantaCore
 
-# 启用 Corepack（自动使用正确的 Yarn 版本）
+# 启用 Corepack（自动使用 Yarn 4.x）
 corepack enable
 
-# 安装依赖
+# 安装依赖（已配置淘宝镜像，国内用户无需额外配置）
 yarn install
 
 # 构建
@@ -101,14 +101,15 @@ yarn install
 yarn dev
 ```
 
-### 注意事项
+### 网络问题解决方案
 
-> **Termux 用户**：项目已配置为使用 Yarn 1.x 版本，确保全局 Yarn 版本 >= 1.22.0。
-> 如果遇到版本问题，请运行：
-> ```bash
-> corepack enable
-> corepack prepare yarn@1.22.22 --activate
-> ```
+> **如果安装依赖时遇到网络问题**：
+> 
+> 1. 项目已默认配置淘宝镜像，国内用户可直接使用
+> 2. 如需切换回官方源，修改 `.yarnrc.yml` 中的 `npmRegistryServer`
+> 3. 清理缓存重试：`yarn cache clean && yarn install`
+> 4. 使用手机数据网络而非 WiFi
+> 5. 检查是否有代理干扰：`unset http_proxy && unset https_proxy`
 
 ---
 
